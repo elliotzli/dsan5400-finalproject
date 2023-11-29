@@ -80,8 +80,6 @@ nb_model = joblib.load('model/nb_model.joblib')
 rf_model = joblib.load('model/rf_model.joblib')
 svm_model = joblib.load('model/svm_model.joblib')
 
-import numpy as np
-
 # Define the desired distribution of ratings
 rating_distribution = [0.11, 0.05, 0.12, 0.24, 0.48]
 
@@ -103,6 +101,7 @@ for assigned_rating, count in zip(range(1, 6), rating_counts):
         random_prompt = np.random.choice(prompts)
         generated_comment = generate_comment(random_prompt)
         generated_sentence = generated_comment.split(".")[0] + "."
+        print(generated_sentence)
         cleaned_sentence = clean_text(generated_sentence)
         new_data_tfidf = tfidf_vectorizer_review.transform([cleaned_sentence])
         knn_pred = knn_model.predict(new_data_tfidf)
