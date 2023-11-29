@@ -63,12 +63,10 @@ df_reviews['review'] = df_reviews['summary']+ ' ' +df_reviews['review']
 df_reviews = df_reviews.dropna()
 unique_comments = df_reviews['rating'].value_counts()
 unique_comments = unique_comments.sort_index()
-print(unique_comments)
 tfidf_vectorizer_review = TfidfVectorizer(max_features=10000)
 tfidf_features_review = tfidf_vectorizer_review.fit_transform(df_reviews['review'])
 
 rating_probabilities = unique_comments / sum(unique_comments)
-print(rating_probabilities)
 
 # List of different prompts
 prompts = [
@@ -77,10 +75,10 @@ prompts = [
     "not satisfied with the quality of",
 ]
 
-knn_model = joblib.load('knn_model.joblib')
-nb_model = joblib.load('nb_model.joblib')
-rf_model = joblib.load('rf_model.joblib')
-svm_model = joblib.load('svm_model.joblib')
+knn_model = joblib.load('model/knn_model.joblib')
+nb_model = joblib.load('model/nb_model.joblib')
+rf_model = joblib.load('model/rf_model.joblib')
+svm_model = joblib.load('model/svm_model.joblib')
 
 import numpy as np
 
