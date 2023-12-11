@@ -1,8 +1,11 @@
-### DSAN 5400 Final Project
+# dsan5400-finalproject
 
-# Auto Review Generator
 
-#### Group member: Haoyu Wang, Siyuan Zhang, Leqi Ying, Elliot Li
+## Auto Review Generator
+
+### Group member: Haoyu Wang, Siyuan Zhang, Leqi Ying, Elliot Li
+
+<img src="images/Diagram.png" alt="Error" width="200"/>
 
 #### Background
 
@@ -48,9 +51,17 @@ Using large language models, we can generate comments from given prompts. By ali
 
 You can use code in autocomment.py to generate comments as you need.
 
+
+By using the data set we already have, we clean the data and then train a series of machine learning models.
+We used Amazon's rating rating dataset to rate different reviews using a trained model on a scale of 1-5.
+
+Prompts are given to the generation model to automatically generate comments by using ChatGPT2.
+Again, the existing scoring model is used to score and filter a large number of generated comments, so that the scores of generated comments are consistent with the scores of the training set.
+
+Randomly select one of the generated comments to ensure the fairness of randomly generated comments.
+
 #### References
 
 Justifying recommendations using distantly-labeled reviews and fined-grained aspects
 Jianmo Ni, Jiacheng Li, Julian McAuley
 Empirical Methods in Natural Language Processing (EMNLP), 2019
-
