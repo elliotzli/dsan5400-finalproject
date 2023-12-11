@@ -9,10 +9,15 @@
 Auto commenting refers to the process of automatically generating and posting comments, typically on websites, social media platforms, or within software applications.
 
 Enhanced Engagement: help maintain a consistent level of activity and engagement on posts
+
 Efficient Customer Service: provide quick responses to common queries in customer service
+
 Time-Saving: individuals and businesses can save significant amounts of time
+
 Consistency in Messaging: ensures that the messaging remains consistent
+
 24/7 Availability: providing responses and interactions even during off-hours
+
 Scalability: can handle a large volume of interactions simultaneously
 
 #### Dataset
